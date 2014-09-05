@@ -25,4 +25,5 @@ test-hpp: 8ea6f54874a9ec78083e55384452f065f467f673
 Comment
 -------
   - Discretized collision checking,
+  - no path optimization,
   - directed roadmaps.
