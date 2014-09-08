@@ -1,0 +1,3 @@
+  - Continuous collision checking,
+  - no path optimization,
+  - directed roadmaps.

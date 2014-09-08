@@ -1,7 +1,7 @@
 fcl: b7b8bd8fc1c1d425867210868085f666331b53c1
 hpp-constraints: 5bb1bf2871fc867c5683657fdb59c8ae5e566312
 hpp-corbaserver: ed8008b9f7655ccfc00b44f8fa9d65a1616b82ad
-hpp-core: 998242bba4f601101dd3264be57c0a66c7bf060c
+hpp-core: 6296fcdc0980b2a4fb19ce9f4b2f20120ed9b9cd
 hpp-doc: 81fae339663913f3fa1479f75e4dd874e43bdf53
 hpp-hrp2: 063de2861373ecfd1ff56c0a8e170bf107b8f8c1
 hpp-model: b2d9c3101545647a67d73188292b2cc9d7bc8083
@@ -21,9 +21,3 @@ robot_capsule_urdf: 7ca48311a16b05b639682d1d780daa18049ec06f
 robot_model_py: ba8d4de4cd811374e490bb93c825677f7590eb06
 robot_state_chain_publisher: be765c4bdb361202b172dbad1bb66d03c04b9fd6
 test-hpp: 8ea6f54874a9ec78083e55384452f065f467f673
-
-Comment
--------
-  - Continuous collision checking with tolerance 0.025
-  - no path optimization,
-  - directed roadmaps.
