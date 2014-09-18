@@ -1,0 +1,4 @@
+  - Continuous collision checking with tolerance 0.025,
+  - no path optimization,
+  - directed roadmaps,
+

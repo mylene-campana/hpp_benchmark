@@ -1,0 +1,8 @@
+  - Continuous collision checking with penetration 0.025,
+    - evaluate collision between pairs at increasing sequence of parameters
+      along path (if not reverse).
+      Next parameter is computed in such a way that no point has moved by more
+      than twice the penetration. If collision extract path between start and
+      last validated configuration.
+  - no path optimization,
+  - directed roadmaps,
