@@ -3,6 +3,7 @@
     - iteratively
       - sort collision pair by increasing upper bound of valid interval,
       - take middle of first non validated interval as new parameter,
-      - validate new parameter for first pair.
+      - validate new parameter for first pair,
+      - compute partial forward kinematics.
   - no path optimization,
   - directed roadmaps.
