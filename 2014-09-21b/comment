@@ -1,0 +1,13 @@
+  - Continuous collision checking with no penetration allowed.
+    - Validate interval for each collision pair at the beginning of the path,
+    - iteratively
+      - sort collision pair by increasing upper bound of valid interval,
+      - take middle of first non validated interval as new parameter,
+      - validate new parameter for first pair,
+      - compute partial forward kinematics.
+    - build one BodyPairCollision object for each joint and store all obstacles
+      of the environment.
+  - no path optimization,
+  - directed roadmaps.
+
+  Obtained with hppcorbaserver and script pr2-direct-path.py
