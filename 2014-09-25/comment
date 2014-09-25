@@ -1,0 +1,5 @@
+  - Discretized collision checking,
+  - no path optimization,
+  - directed roadmaps.
+
+Same as 2014-09-03 but with more recent versions of packages.
