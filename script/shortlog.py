@@ -19,11 +19,14 @@ for d in directories:
     subdirs.sort ()
     for d1 in subdirs:
         print ("  --- %s ---"%d1)
-        with open (join (d, d1, 'benchmark')) as benchmark:
-            for line in benchmark:
-                if line [:7] == "Average":
-                    print ("  " + line[:-1])
+        try:
+            with open (join (d, d1, 'benchmark')) as benchmark:
+                for line in benchmark:
+                    if line [:7] == "Average":
+                        print ("  " + line[:-1])
             print ('\n')
+        except:
+            pass
     
         
 #os.path.isdir ()
