@@ -1,0 +1,15 @@
+For PR2,
+  - Continuous collision checking with no penetration allowed.
+    - Validate interval for each collision pair at the beginning of the path,
+    - iteratively
+      - sort collision pair by increasing upper bound of valid interval,
+      - take middle of first non validated interval as new parameter,
+      - validate new parameter for first pair,
+      - compute partial forward kinematics.
+  - no path optimization,
+  - directed roadmaps.
+  - The same as 2014-09-12 with recent versions of the packages.
+
+For HRP2,
+  - Continuous collision checking (progressive) with penetration 0.025.
+  - The same as 2014-09-18 with recent version of the packages.
