@@ -1,0 +1,19 @@
+<launch>
+  <param name="obstacle_description"
+    textfile="$(find hpp_benchmark)/urdf/obstacle.urdf"/>
+  <param name="robot_description"
+	 textfile="$(find hpp_benchmark)/urdf/lydia.urdf"/>
+  <node name="robot_state_publisher"
+	pkg="robot_state_publisher"
+	type="state_publisher"
+	respawn="true">
+    <param name="tf_prefix" value=""/>
+  </node>
+  <node pkg="tf" type="static_transform_publisher"
+	name="obstacle_base"
+	args="0 0 0 0 0 0 /map /obstacle/obstacle_base 200">
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false"
+	args="-d $(find hpp_benchmark)/rviz/lydia/config.rviz">
+  </node>
+</launch>
