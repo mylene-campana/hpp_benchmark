@@ -33,11 +33,6 @@ FINDPYTHON()
 
 SETUP_PROJECT()
 
-# Catkin stuff
-FIND_PACKAGE(catkin REQUIRED COMPONENTS
-  hpp_ros)
-CATKIN_PACKAGE()
-
 # Activate hpp-util logging if requested
 SET (HPP_DEBUG FALSE CACHE BOOL "trigger hpp-util debug output")
 IF (HPP_DEBUG)
@@ -46,13 +41,14 @@ ENDIF()
 
 ADD_DOC_DEPENDENCY("hpp-core >= 3")
 ADD_REQUIRED_DEPENDENCY("hpp-corbaserver >= 3")
-ADD_REQUIRED_DEPENDENCY("hpp_ros")
+ADD_REQUIRED_DEPENDENCY("hpp-gepetto-viewer")
 
 SET(CATKIN_PACKAGE_SHARE_DESTINATION
   ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME})
 
-install(FILES launch/lydia.launch
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+install(FILES
+  package.xml
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   )
 install(FILES
   urdf/lydia.urdf
@@ -61,9 +57,6 @@ install(FILES
   )
 install(FILES srdf/lydia.srdf 
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/srdf
-  )
-install(FILES rviz/lydia/config.rviz
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rviz
   )
 install (FILES
   src/hpp/corbaserver/lydia/robot.py
