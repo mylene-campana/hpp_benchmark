@@ -15,7 +15,20 @@ q_goal = q_init [::]
 q_init [2] = -0.6
 q_goal [2] =  0.6
 
-ps.selectPathPlanner ("VisibilityPRM")
+ps.selectPathPlanner ("VisibilityPrmPlanner")
+ps.selectPathValidation ("Dichotomy", 0.)
+
 ps.setInitialConfig (q_init)
 ps.addGoalConfig (q_goal)
-ps.solve ()
+
+ps.readRoadmap ("/local/mcampana/devel/hpp/src/hpp_benchmark/roadmap/lydia.rdm")
+#ps.solve ()
+
+pp = PathPlayer (robot.client, r)
+
+"""
+ps.addPathOptimizer ("GradientBased")
+ps.optimizePath (0)
+ps.numberPaths()
+ps.pathLength(ps.numberPaths()-1)
+"""
